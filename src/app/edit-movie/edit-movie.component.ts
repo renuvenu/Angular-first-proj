@@ -42,10 +42,12 @@ export class EditMovieComponent {
     });
     this.moviesService.getMovieDetail(this.editMovieId).subscribe((val) => {
       this.movieDetail = val;
-      this.movieForm.controls['name'].setValue(this.movieDetail.name);
-      this.movieForm.controls['poster'].setValue(this.movieDetail.poster);
-      this.movieForm.controls['summary'].setValue(this.movieDetail.summary);
-      this.movieForm.controls['rating'].setValue(this.movieDetail.rating);
+      this.movieForm.setValue({
+        name: this.movieDetail.name,
+        poster: this.movieDetail.poster,
+        rating: this.movieDetail.rating,
+        summary: this.movieDetail.summary,
+      });
     });
   }
 

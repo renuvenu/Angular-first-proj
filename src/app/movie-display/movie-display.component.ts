@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface movieComp {
   id: string;
@@ -16,7 +16,7 @@ interface movieComp {
   styleUrls: ['./movie-display.component.css'],
 })
 export class MovieDisplayComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
   @Input() movie: movieComp = {
     id: '',
     name: '',
@@ -35,7 +35,9 @@ export class MovieDisplayComponent {
   }
 
   onEdit(id: string) {
-    this.router.navigate([`/edit-movie/${id}`]);
+    this.router.navigate([`./edit-movie/${id}`], {
+      relativeTo: this.route,
+    });
   }
 
   toggle(id: string) {

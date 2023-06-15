@@ -34,7 +34,16 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    component: MovieListComponent,
+    children: [
+      {
+        path: '',
+        component: MovieListComponent,
+      },
+      {
+        path: 'edit-movie/:id',
+        component: EditMovieComponent,
+      },
+    ],
   },
   {
     path: 'todo',
@@ -43,10 +52,6 @@ const routes: Routes = [
   {
     path: 'add-movie',
     component: ReactiveFormsComponent,
-  },
-  {
-    path: 'edit-movie/:id',
-    component: EditMovieComponent,
   },
   {
     path: '**',
