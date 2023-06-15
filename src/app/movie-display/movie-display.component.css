@@ -1,0 +1,30 @@
+.card {
+    width: 201px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 201px;
+    height: 276px;
+    border-radius: 15px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h4 {
+    margin-top: 4px;
+}
+
+p{
+    margin-top: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}

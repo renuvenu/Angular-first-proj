@@ -1,0 +1,11 @@
+<div class="forms">
+  <!-- <app-reactive-forms class="form"></app-reactive-forms> -->
+  <div class="container">
+    <ng-container *ngFor="let movie of movies$ | async; trackBy: movieId">
+      <app-movie-display
+        [movie]="movie"
+        (idToDelete)="deleteMovie($event)"
+      ></app-movie-display>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<ul class="list-container">
+  <li><a routerLink="/home">Home</a></li>
+  <li><a routerLink="/add-movie">Add movie</a></li>
+  <li><a routerLink="/movies">Movies</a></li>
+  <li><a routerLink="/todo">Todo</a></li>
+</ul>
+
+<router-outlet></router-outlet>
+<!-- <ng-container *ngFor="let user of users"> -->
+<!-- <app-hello-msg
+  *ngFor="let user of users"
+  name="{{ user.name }}"
+  image="{{ user.image }}"
+></app-hello-msg> -->
+<!-- </ng-container> -->
+
+<!-- <app-counter></app-counter> -->
+
+<!-- <div class="butt">
+  <button (click)="isAddingMovie = true">Add movie</button>
+</div>
+<div class="inputs" *ngIf="isAddingMovie || isEditingMovie">
+  <span>Name</span><input [(ngModel)]="name" /> Poster<input
+    [(ngModel)]="poster"
+  />
+  Rating<input [(ngModel)]="rating" value="" /> Summary<input
+    [(ngModel)]="summary"
+  />
+  <button style="margin-top: 5px" (click)="onAddingMovie()">submit</button>
+</div>
+<div class="container">
+  <ng-container *ngFor="let movie of movies">
+    <app-movie-display
+      [movie]="movie"
+      (idToDelete)="deleteMovie($event)"
+      (idToEdit)="editMovie($event)"
+    ></app-movie-display>
+  </ng-container>
+</div> -->
+
+<!-- <app-reactive-forms></app-reactive-forms>
+<div class="container">
+  <ng-container *ngFor="let movie of movies">
+    <app-movie-display
+      [movie]="movie"
+      (idToDelete)="deleteMovie($event)"
+      (idToEdit)="editMovie($event)"
+    ></app-movie-display>
+  </ng-container>
+</div> -->
+
+<!-- <app-counter></app-counter> -->

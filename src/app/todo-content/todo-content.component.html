@@ -1,0 +1,4 @@
+<input type="checkbox" [checked]="todo.checked" (click)="onChecked(todo.id)"/>
+<span [ngClass]="{ done: todo.checked }">{{ todo.name }}</span>
+<button (click)="onEdit(todo.id)">Edit</button>
+<button (click)="onDelete(todo.id)">delete</button>

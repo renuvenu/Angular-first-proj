@@ -1,0 +1,15 @@
+<div class="card">
+  <img src="{{ movie.poster }}" />
+  <div class="title">
+    <h4>{{ movie.name }}</h4>
+    <h4>⭐ {{ movie.rating }}</h4>
+  </div>
+  <button (click)="toggle(movie.id)">👁</button>
+  <p>
+    {{ movie.summary }}
+  </p>
+  <div class="buttons">
+    <button (click)="onEdit(movie.id)">Edit</button>
+    <button (click)="onDelete(movie.id)">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div>
+  <button (click)="increment()">👍 {{ like }}</button>
+  <button (click)="decrement()">👎 {{ disLike }}</button>
+  <p *ngIf="like > 10; else bad">Super cool</p>
+  <ng-template #bad>
+    <p>Not good</p>
+  </ng-template>
+</div>

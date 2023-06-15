@@ -1,0 +1,6 @@
+<form [formGroup]="searchForm">
+  <input type="text" placeholder="enter name" formControlName="searchField" />
+</form>
+<ul>
+  <li *ngFor="let country of countries">{{ country.name.common }}</li>
+</ul>

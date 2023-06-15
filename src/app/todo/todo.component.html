@@ -1,0 +1,16 @@
+<div>
+  <input [(ngModel)]="todoInput" />
+  <button (click)="addToTodoList()">Add</button>
+  <button *ngIf="isEdit" (click)="editList()">Edit</button>
+</div>
+
+<ul>
+  <li *ngFor="let todo of todoList">
+    <app-todo-content
+      [todo]="todo"
+      (id)="onCheckboxChange($event)"
+      (idToDelete)="deleteTodo($event)"
+      (idToEdit)="onEdit($event)"
+    ></app-todo-content>
+  </li>
+</ul>
