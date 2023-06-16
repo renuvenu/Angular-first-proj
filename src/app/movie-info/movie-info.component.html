@@ -1,0 +1,28 @@
+<app-loader *ngIf="!movieDetail; else details"></app-loader>
+<ng-template #details>
+  <!-- <iframe
+    width="900"
+    height="506"
+    src="{{ movieDetail?.trailer }}"
+    title="கோலாகலமாக நடந்த என் தங்கச்சி சடங்கு 🥺❤️ Papa’s Grand Puberty Function ❤️❤️  @ramwithjaanu"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe> -->
+  <mat-card class="card">
+    <mat-card-content class="container">
+      <div class="sideImg">
+        <img src="{{ movieDetail.poster }}" />
+      </div>
+      <div class="content">
+        <div style="display: flex;">
+          <h2>{{ movieDetail.name }}</h2>
+          <h2>⭐ {{ movieDetail.rating }}</h2>
+        </div>
+        <div>
+            <p>{{movieDetail.summary}}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

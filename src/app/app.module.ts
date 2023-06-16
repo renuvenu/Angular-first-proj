@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { HelloMsgComponent } from './hello-msg/hello-msg.component';
 import { CounterComponent } from './counter/counter.component';
@@ -21,6 +22,9 @@ import { RxComponent } from './rx/rx.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StockComponent } from './stock/stock.component';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { MatCardModule } from '@angular/material/card';
+import { MovieInfoComponent } from './movie-info/movie-info.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const routes: Routes = [
   {
@@ -38,6 +42,10 @@ const routes: Routes = [
       {
         path: '',
         component: MovieListComponent,
+      },
+      {
+        path: 'info/:id',
+        component: MovieInfoComponent,
       },
       {
         path: 'edit-movie/:id',
@@ -74,6 +82,8 @@ const routes: Routes = [
     RxComponent,
     StockComponent,
     EditMovieComponent,
+    MovieInfoComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +95,9 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     HttpClientModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

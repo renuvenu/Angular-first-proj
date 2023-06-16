@@ -1,52 +1,13 @@
-<ul class="list-container">
-  <li><a routerLink="/home">Home</a></li>
-  <li><a routerLink="/add-movie">Add movie</a></li>
-  <li><a routerLink="/movies">Movies</a></li>
-  <li><a routerLink="/todo">Todo</a></li>
-</ul>
+<p>
+  <mat-toolbar color="primary">
+    <img src="https://img.icons8.com/?size=1x&id=11074&format=png" />
+    <ul class="list-container">
+      <li routerLink="/home">Home</li>
+      <li routerLink="/add-movie">Add movie</li>
+      <li routerLink="/movies">Movies</li>
+      <li routerLink="/todo">Todo</li>
+    </ul>
+  </mat-toolbar>
+</p>
 
 <router-outlet></router-outlet>
-<!-- <ng-container *ngFor="let user of users"> -->
-<!-- <app-hello-msg
-  *ngFor="let user of users"
-  name="{{ user.name }}"
-  image="{{ user.image }}"
-></app-hello-msg> -->
-<!-- </ng-container> -->
-
-<!-- <app-counter></app-counter> -->
-
-<!-- <div class="butt">
-  <button (click)="isAddingMovie = true">Add movie</button>
-</div>
-<div class="inputs" *ngIf="isAddingMovie || isEditingMovie">
-  <span>Name</span><input [(ngModel)]="name" /> Poster<input
-    [(ngModel)]="poster"
-  />
-  Rating<input [(ngModel)]="rating" value="" /> Summary<input
-    [(ngModel)]="summary"
-  />
-  <button style="margin-top: 5px" (click)="onAddingMovie()">submit</button>
-</div>
-<div class="container">
-  <ng-container *ngFor="let movie of movies">
-    <app-movie-display
-      [movie]="movie"
-      (idToDelete)="deleteMovie($event)"
-      (idToEdit)="editMovie($event)"
-    ></app-movie-display>
-  </ng-container>
-</div> -->
-
-<!-- <app-reactive-forms></app-reactive-forms>
-<div class="container">
-  <ng-container *ngFor="let movie of movies">
-    <app-movie-display
-      [movie]="movie"
-      (idToDelete)="deleteMovie($event)"
-      (idToEdit)="editMovie($event)"
-    ></app-movie-display>
-  </ng-container>
-</div> -->
-
-<!-- <app-counter></app-counter> -->

@@ -25,5 +25,26 @@ input {
 .list-container {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
+    cursor: pointer;
+}
+
+.example-spacer {
+    /* flex: 1 1 auto; */
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px
+}
+
+img {
+    width: 50px;
+}
+
+h2 {
+    margin: 0;
 }

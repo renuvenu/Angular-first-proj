@@ -42,12 +42,13 @@ export class EditMovieComponent {
     });
     this.moviesService.getMovieDetail(this.editMovieId).subscribe((val) => {
       this.movieDetail = val;
-      this.movieForm.setValue({
-        name: this.movieDetail.name,
-        poster: this.movieDetail.poster,
-        rating: this.movieDetail.rating,
-        summary: this.movieDetail.summary,
-      });
+      // this.movieForm.setValue({
+      //   name: this.movieDetail.name,
+      //   poster: this.movieDetail.poster,
+      //   rating: this.movieDetail.rating,
+      //   summary: this.movieDetail.summary,
+      // });
+      this.movieForm.patchValue(this.movieDetail);
     });
   }
 

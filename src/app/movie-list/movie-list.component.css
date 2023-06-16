@@ -1,15 +1,11 @@
 .container {
-    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 16px;
-    overflow: scroll;
+    padding: 24px;
 }
 
-.forms {
-    display: flex;
-}
 
 .form {
     width: 300px;
@@ -17,4 +13,5 @@
     position: sticky;
     background-color: white;
     top: 20px;
+    padding: 50px;
 }

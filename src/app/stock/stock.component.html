@@ -1,4 +1,7 @@
 <form [formGroup]="stockForm">
-  <input type="text" placeholder="Enter stock name" formControlName="name" />
+  <mat-form-field class="example-full-width">
+    <mat-label>Stock Name</mat-label>
+    <input matInput placeholder="Ex. IBM,GOOGL,APPL" formControlName="name" />
+  </mat-form-field>
 </form>
 <h4>{{ stockPrice }}</h4>

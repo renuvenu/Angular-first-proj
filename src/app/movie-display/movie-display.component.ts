@@ -26,6 +26,8 @@ export class MovieDisplayComponent {
     trailer: '',
   };
 
+  showSummary = true;
+
   @Output() idToDelete: EventEmitter<any> = new EventEmitter();
   @Output() idToEdit: EventEmitter<any> = new EventEmitter();
   @Output() idToToggle: EventEmitter<any> = new EventEmitter();
@@ -40,7 +42,13 @@ export class MovieDisplayComponent {
     });
   }
 
-  toggle(id: string) {
-    // this.idToToggle.emit(id)
+  toggle() {
+    this.showSummary = !this.showSummary;
+  }
+
+  gotoMovieInfo(id: string) {
+    this.router.navigate([`./info/${id}`], {
+      relativeTo: this.route,
+    });
   }
 }

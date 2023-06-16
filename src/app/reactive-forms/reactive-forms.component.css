@@ -1,4 +1,5 @@
 .container {
+    padding: 24px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -6,6 +7,17 @@
     margin-bottom: 20px;
 }
 
-p {
-    margin: 0;
+.example-full-width {
+    width: 100%;
+}
+
+.card {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.form-data {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 16px;
 }

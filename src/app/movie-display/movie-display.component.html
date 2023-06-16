@@ -1,15 +1,35 @@
-<div class="card">
-  <img src="{{ movie.poster }}" />
-  <div class="title">
-    <h4>{{ movie.name }}</h4>
-    <h4>⭐ {{ movie.rating }}</h4>
-  </div>
-  <button (click)="toggle(movie.id)">👁</button>
-  <p>
-    {{ movie.summary }}
-  </p>
-  <div class="buttons">
-    <button (click)="onEdit(movie.id)">Edit</button>
-    <button (click)="onDelete(movie.id)">Delete</button>
-  </div>
-</div>
+<mat-card class="card">
+  <mat-card-content class="card-content">
+    <img src="{{ movie.poster }}" class="poster" />
+    <div class="movie-content">
+      <div class="title">
+        <h2>{{ movie.name }}</h2>
+        <img
+          src="https://img.icons8.com/?size=1x&id=UTHURFTe2y16&format=png"
+          class="arrow-icon"
+          (click)="toggle()"
+          [ngClass]="{ transform: !showSummary }"
+        />
+        <img
+          src="https://img.icons8.com/?size=1x&id=21085&format=png"
+          class="icon"
+          (click)="gotoMovieInfo(movie.id)"
+        />
+        <h2>⭐ {{ movie.rating }}</h2>
+      </div>
+      <div class="summary" *ngIf="showSummary">
+        <p>
+          {{ movie.summary }}
+        </p>
+      </div>
+      <div class="buttons">
+        <button mat-raised-button color="primary" (click)="onEdit(movie.id)">
+          Edit
+        </button>
+        <button mat-raised-button color="primary" (click)="onDelete(movie.id)">
+          Delete
+        </button>
+      </div>
+    </div></mat-card-content
+  ></mat-card
+>
